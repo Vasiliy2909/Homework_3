@@ -1,0 +1,82 @@
+// Задание № 1
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Вывод треугольника</title>
+  </head>
+
+  <body>
+    <script>
+
+    var symbol = '';
+
+    for (var i = 0; i < 7; i++) { //создаем цикл
+      console.log(symbol += '#'); // выводим символ "#", добовляя 1 на каждой строчке
+    }
+    </script>
+  </body>
+</html>
+
+
+// Задание №2
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Шахматная доска</title>
+  </head>
+  <body>
+    <script>
+
+      var str = '',  count = 0, number_str = 0;
+      for (var i = 1; i <= 64 ; i++) {
+
+        count = i + number_str;
+        str += (count % 2 == 0) ? '#' : ' '; // заполняем строку либо " ", либо "#"
+
+        if (i % 8 == 0) {
+          console.log(str);  // выводим строку из 8 элементов
+          str = '';
+          number_str += 1
+        }
+      }
+
+    </script>
+  </body>
+</html>
+
+
+// Задание №2 (второй способ)
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Шахматная доска</title>
+  </head>
+  <body>
+    <script>
+
+    var str = '', symbol_1 = '#', symbol_2 = ' ', count = 0, number_str = 0;
+    for (var i = 1; i <= 64; i++) {
+
+      count = i + number_str;
+      if (count % 2 == 0) {
+        str += symbol_1;
+      } else {
+        str += symbol_2;
+      }
+
+      if (i % 8 == 0) {
+        console.log(str);
+        str = '';
+        number_str += 1
+      }
+
+    }
+
+    </script>
+  </body>
+</html>
