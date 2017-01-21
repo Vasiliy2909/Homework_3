@@ -48,7 +48,7 @@
 </html>
 
 
-// Задание №2 (второй способ)
+// Задание №2 (второй способ с двумерным массивом)
 
 <!DOCTYPE html>
 <html>
@@ -58,25 +58,23 @@
   </head>
   <body>
     <script>
+      var n = 8, m = 8, count = 0, number_str = 0;
+      var mas = [];
 
-    var str = '', symbol_1 = '#', symbol_2 = ' ', count = 0, number_str = 0;
-    for (var i = 1; i <= 64; i++) {
+      for (var i = 1; i <= m; i++){
+        mas[i] = [];
+        number_str += 1;
 
-      count = i + number_str;
-      if (count % 2 == 0) {
-        str += symbol_1;
-      } else {
-        str += symbol_2;
-      }
+        for (var j = 1; j <= n; j++){
+          count = j + number_str;
 
-      if (i % 8 == 0) {
-        console.log(str);
-        str = '';
-        number_str += 1
-      }
-
-    }
-
+          if (count % 2 == 0) {
+           mas[i][j] = ' ';
+          } else {
+            mas[i][j] = '#';
+          }
+       }}
+    console.table(mas);
     </script>
   </body>
 </html>
